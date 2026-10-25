@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<g fill="#FFA64D" stroke="#0A2E4A" stroke-width="5" stroke-linejoin="round">
+<polygon points="200,6 224,76 176,76"/>
+<polygon points="200,6 224,76 176,76" transform="rotate(30 200 200)"/>
+<polygon points="200,6 224,76 176,76" transform="rotate(60 200 200)"/>
+<polygon points="200,6 224,76 176,76" transform="rotate(90 200 200)"/>
+<polygon points="200,6 224,76 176,76" transform="rotate(120 200 200)"/>
+<polygon points="200,6 224,76 176,76" transform="rotate(150 200 200)"/>
+<polygon points="200,6 224,76 176,76" transform="rotate(180 200 200)"/>
+<polygon points="200,6 224,76 176,76" transform="rotate(210 200 200)"/>
+<polygon points="200,6 224,76 176,76" transform="rotate(240 200 200)"/>
+<polygon points="200,6 224,76 176,76" transform="rotate(270 200 200)"/>
+<polygon points="200,6 224,76 176,76" transform="rotate(300 200 200)"/>
+<polygon points="200,6 224,76 176,76" transform="rotate(330 200 200)"/>
+<circle cx="200" cy="200" r="116"/>
+</g>
+<path d="M200 200c0-10 14-14 22-6 12 12-2 32-20 30-28-3-36-38-16-58 26-26 70-10 76 28 6 40-30 70-68 62" fill="none" stroke="#0A2E4A" stroke-width="6" stroke-linecap="round"/>
+</svg>
