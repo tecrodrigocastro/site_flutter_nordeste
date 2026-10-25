@@ -1,8 +1,8 @@
 /// Instagram oficial da comunidade.
 const linkInstagram = 'https://www.instagram.com/flutternordeste';
 
-/// TODO: trocar pelo link do grupo (WhatsApp ou Discord).
-const linkGrupo = '#participar';
+/// Grupo do WhatsApp da comunidade.
+const linkGrupo = 'https://chat.whatsapp.com/IrC6ZdA3Svc0KY3NVDGg8v';
 
-/// Texto do botão do grupo. TODO: trocar junto com [linkGrupo].
-const rotuloGrupo = '[LINK DO GRUPO: WHATSAPP OU DISCORD]';
+/// Texto do botão do grupo.
+const rotuloGrupo = 'Entrar no grupo do WhatsApp';

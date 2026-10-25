@@ -36,6 +36,5 @@ A saída fica em `build/jaspr/` e pode ser hospedada em qualquer serviço de sit
 ## Para preencher
 
 - `lib/data/encontros.dart`: datas, cidades e nomes dos encontros (hoje são campos `[ENTRE COLCHETES]`).
-- `lib/data/links.dart`: link do grupo (WhatsApp ou Discord).
 - `lib/main.server.dart`: `og:image` e `og:url`, quando o domínio existir.
 - `web/favicon.ico`: ainda é o do template do Jaspr.
