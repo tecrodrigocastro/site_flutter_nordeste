@@ -166,12 +166,13 @@ button:focus-visible {
   font-size: 17px;
 }
 
-.nav__link {
+.nav__item a {
+  display: inline-block;
   padding: 12px 0;
 }
 
-.nav__link:hover,
-.nav__link--ativo {
+.nav__item a:hover,
+.nav__item--ativo a {
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 6px;
