@@ -4,7 +4,6 @@
 /// To run code on the client, check the `main.client.dart` file.
 library;
 
-import 'package:jaspr/dom.dart';
 // Server-specific Jaspr import.
 import 'package:jaspr/server.dart';
 
@@ -13,6 +12,9 @@ import 'app.dart';
 
 // This file is generated automatically by Jaspr, do not remove or edit.
 import 'main.server.options.dart';
+
+const _descricao = 'Flutter Nordeste: comunidade de desenvolvedores Flutter do Nordeste do Brasil. '
+    'Encontros, troca de conhecimento e palco para novas vozes.';
 
 void main() {
   // Initializes the server environment with the generated default options.
@@ -25,23 +27,22 @@ void main() {
   // [Document] renders the root document structure (<html>, <head> and <body>)
   // with the provided parameters and components.
   runApp(Document(
-    title: 'site_flutter_nordeste',
-    styles: [
-      // Special import rule to include to another css file.
-      css.import('https://fonts.googleapis.com/css?family=Roboto'),
-      // Each style rule takes a valid css selector and a set of styles.
-      // Styles are defined using type-safe css bindings and can be freely chained and nested.
-      css('html, body').styles(
-        width: 100.percent,
-        minHeight: 100.vh,
-        padding: .zero,
-        margin: .zero,
-        fontFamily: const .list([FontFamily('Roboto'), FontFamilies.sansSerif]),
-      ),
-      css('h1').styles(
-        margin: .unset,
-        fontSize: 4.rem,
-      ),
+    title: 'Flutter Nordeste',
+    lang: 'pt-BR',
+    meta: {
+      'description': _descricao,
+      'theme-color': '#0A2E4A',
+    },
+    head: [
+      // Todo o visual do site vive em web/styles.css.
+      Component.element(tag: 'link', attributes: {'rel': 'stylesheet', 'href': '/styles.css'}),
+      // Open Graph: prévia do link no WhatsApp, Instagram e redes.
+      // TODO: adicionar og:image e og:url com a URL absoluta quando o domínio existir.
+      Component.element(tag: 'meta', attributes: {'property': 'og:type', 'content': 'website'}),
+      Component.element(tag: 'meta', attributes: {'property': 'og:locale', 'content': 'pt_BR'}),
+      Component.element(tag: 'meta', attributes: {'property': 'og:site_name', 'content': 'Flutter Nordeste'}),
+      Component.element(tag: 'meta', attributes: {'property': 'og:title', 'content': 'Flutter Nordeste'}),
+      Component.element(tag: 'meta', attributes: {'property': 'og:description', 'content': _descricao}),
     ],
     body: App(),
   ));
