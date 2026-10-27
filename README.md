@@ -3,6 +3,8 @@
 Site da comunidade Flutter Nordeste, feito com [Jaspr](https://docs.jaspr.site) em modo **static**
 (cada página é pré-renderizada em HTML, sem JavaScript).
 
+Design do site: https://claude.ai/artifact/C5twUdSGNSb5HHjHL4xggF#play-15dd8cd198dd
+
 ## Rodando
 
 ```shell
