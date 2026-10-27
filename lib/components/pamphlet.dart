@@ -2,10 +2,10 @@ import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 
 /// Sextilha de boas-vindas no estilo folheto de cordel.
-class Folheto extends StatelessComponent {
-  const Folheto({super.key});
+class Pamphlet extends StatelessComponent {
+  const Pamphlet({super.key});
 
-  static const _versos = [
+  static const _verses = [
     'Do Piauí a Sergipe',
     'tem dev pra todo lugar,',
     'com um widget na mão',
@@ -16,21 +16,21 @@ class Folheto extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return section(id: 'folheto', classes: 'folheto', [
-      div(classes: 'container folheto__inner', [
-        div(classes: 'folheto__foto', [
+    return section(id: 'pamphlet', classes: 'pamphlet', [
+      div(classes: 'container pamphlet__inner', [
+        div(classes: 'pamphlet__photo', [
           img(
-            src: '/images/mascote-chapeu.png',
+            src: '/images/mascot-hat.png',
             alt: 'O mascote da comunidade usando um chapéu de cangaceiro de couro com estrela de oito pontas',
-            classes: 'folheto__img',
+            classes: 'pamphlet__img',
           ),
         ]),
-        div(classes: 'folheto__conteudo', [
-          p(classes: 'folheto__rotulo', [.text('Folheto nº 1 · Sextilha de boas-vindas')]),
-          div(classes: 'folheto__papel', [
-            for (final verso in _versos) span(classes: 'verso', [.text(verso)]),
+        div(classes: 'pamphlet__content', [
+          p(classes: 'pamphlet__label', [.text('Folheto nº 1 · Sextilha de boas-vindas')]),
+          div(classes: 'pamphlet__paper', [
+            for (final verse in _verses) span(classes: 'verse', [.text(verse)]),
           ]),
-          p(classes: 'folheto__texto', [
+          p(classes: 'pamphlet__text', [
             .text(
               'A Flutter Nordeste é uma casa em comum para quem desenvolve com Flutter na nossa região: '
               'quem está começando, quem já entrega app em produção e quem quer subir num palco pela primeira vez.',

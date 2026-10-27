@@ -7,11 +7,11 @@ class Hero extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return section(id: 'topo', classes: 'hero', [
+    return section(id: 'top', classes: 'hero', [
       div(classes: 'container hero__inner', [
-        div(classes: 'hero__texto', [
-          p(classes: 'selo', [.text('Comunidade de Flutter · Nordeste do Brasil')]),
-          h1(classes: 'hero__titulo', [
+        div(classes: 'hero__text', [
+          p(classes: 'badge', [.text('Comunidade de Flutter · Nordeste do Brasil')]),
+          h1(classes: 'hero__title', [
             span(classes: 'hero__flutter', [.text('Flutter')]),
             span(classes: 'hero__nordeste', [.text('Nordeste')]),
           ]),
@@ -21,20 +21,20 @@ class Hero extends StatelessComponent {
               'Dev de todo canto, trocando ideia e construindo app junto.',
             ),
           ]),
-          div(classes: 'hero__acoes', [
-            a(href: '#participar', classes: 'btn btn--petroleo', [.text('Quero fazer parte')]),
-            a(href: '/encontros', classes: 'btn btn--branco', [.text('Próximos encontros')]),
+          div(classes: 'hero__actions', [
+            a(href: '#join', classes: 'btn btn--petrol', [.text('Quero fazer parte')]),
+            a(href: '/encontros', classes: 'btn btn--white', [.text('Próximos encontros')]),
           ]),
         ]),
-        div(classes: 'hero__arte', [
-          img(src: '/images/sol.svg', alt: '', classes: 'hero__sol'),
-          div(classes: 'hero__moldura', [
+        div(classes: 'hero__art', [
+          img(src: '/images/sun.svg', alt: '', classes: 'hero__sun'),
+          div(classes: 'hero__frame', [
             img(
-              src: '/images/mascote-bandana.png',
+              src: '/images/mascot-bandana.png',
               alt: 'Mascote da Flutter Nordeste, um passarinho azul com bandana de estrelas, entre cactos no sertão',
               classes: 'hero__img',
             ),
-            div(classes: 'hero__carimbo', [.text('Aberta pra todo dev')]),
+            div(classes: 'hero__stamp', [.text('Aberta pra todo dev')]),
           ]),
         ]),
       ]),

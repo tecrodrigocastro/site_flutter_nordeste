@@ -4,9 +4,9 @@ import 'package:jaspr_router/jaspr_router.dart';
 
 import 'components/site_footer.dart';
 import 'components/site_header.dart';
-import 'pages/encontros.dart';
+import 'pages/meetups.dart';
 import 'pages/home.dart';
-import 'pages/sobre.dart';
+import 'pages/about.dart';
 
 /// Componente raiz. Com roteamento multi-page, ele só é construído no servidor
 /// durante o pré-render: cada rota vira um arquivo .html estático.
@@ -20,11 +20,11 @@ class App extends StatelessComponent {
       Router(
         routes: [
           Route(path: '/', title: 'Flutter Nordeste', builder: (context, state) => const Home()),
-          Route(path: '/sobre', title: 'Sobre · Flutter Nordeste', builder: (context, state) => const Sobre()),
+          Route(path: '/sobre', title: 'Sobre · Flutter Nordeste', builder: (context, state) => const About()),
           Route(
             path: '/encontros',
             title: 'Encontros · Flutter Nordeste',
-            builder: (context, state) => const Encontros(),
+            builder: (context, state) => const Meetups(),
           ),
         ],
       ),

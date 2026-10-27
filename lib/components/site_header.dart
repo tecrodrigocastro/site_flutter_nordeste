@@ -7,17 +7,17 @@ class SiteHeader extends StatelessComponent {
   const SiteHeader({super.key});
 
   static const _links = [
-    (rotulo: 'Home', caminho: '/'),
-    (rotulo: 'Sobre', caminho: '/sobre'),
-    (rotulo: 'Encontros', caminho: '/encontros'),
+    (label: 'Home', path: '/'),
+    (label: 'Sobre', path: '/sobre'),
+    (label: 'Encontros', path: '/encontros'),
   ];
 
   @override
   Component build(BuildContext context) {
-    final caminhoAtivo = context.url;
+    final activePath = context.url;
 
     return div([
-      div(classes: 'bandeirolas', attributes: {'aria-hidden': 'true'}, []),
+      div(classes: 'bunting', attributes: {'aria-hidden': 'true'}, []),
       header(classes: 'site-header', [
         div(classes: 'container site-header__inner', [
           div(classes: 'logo', [
@@ -25,10 +25,10 @@ class SiteHeader extends StatelessComponent {
           ]),
           nav(classes: 'nav', attributes: {'aria-label': 'Principal'}, [
             for (final link in _links)
-              div(classes: caminhoAtivo == link.caminho ? 'nav__item nav__item--ativo' : 'nav__item', [
-                Link(to: link.caminho, child: .text(link.rotulo)),
+              div(classes: activePath == link.path ? 'nav__item nav__item--active' : 'nav__item', [
+                Link(to: link.path, child: .text(link.label)),
               ]),
-            a(href: '#participar', classes: 'btn btn--sol btn--pequeno', [.text('Entrar')]),
+            a(href: '#join', classes: 'btn btn--sun btn--small', [.text('Entrar')]),
           ]),
         ]),
       ]),
