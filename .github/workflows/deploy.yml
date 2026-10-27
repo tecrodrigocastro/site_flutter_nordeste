@@ -1,0 +1,46 @@
+name: Deploy Landing Page
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  DART_SDK_VERSION: "3.10.0"
+
+jobs:
+  deploy:
+    name: Build and Deploy to Hostinger
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: ${{ env.DART_SDK_VERSION }}
+
+      - name: Install Dependencies
+        run: dart pub get
+
+      - name: Activate Jaspr CLI
+        run: dart pub global activate jaspr_cli
+
+      - name: Build Site
+        run: dart pub global run jaspr_cli build
+
+      - name: Deploy to Hostinger via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOSTINGER_HOST }}
+          username: ${{ secrets.HOSTINGER_USERNAME }}
+          password: ${{ secrets.HOSTINGER_PASSWORD }}
+          port: ${{ secrets.HOSTINGER_PORT }}
+          source: "build/jaspr/*"
+          target: "/home/u486878136/domains/flutternordeste.com.br/public_html"
+          strip_components: 2
+          timeout: 30s
+          command_timeout: 10m
